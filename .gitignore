@@ -1,0 +1,5 @@
+# Ignorer le dossier env
+env/
+# Ignore le fichier requirements.txt
+*requirements.txt
+
