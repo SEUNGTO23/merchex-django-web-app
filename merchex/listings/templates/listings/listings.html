@@ -1,0 +1,10 @@
+{% extends 'listings/base.html'%}
+
+{% block content %}
+    <ul>
+        <h1>Merchex List</h1>
+        {% for liste in listes%}
+        <li>{{liste.titre}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
