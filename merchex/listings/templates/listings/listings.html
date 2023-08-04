@@ -4,7 +4,14 @@
     <ul>
         <h1>Merchex List</h1>
         {% for liste in listes%}
-        <li>{{liste.titre}}</li>
+        <li>
+            <a href="{% url 'list_detail' liste.id %}">{{liste.titre}}</a>
+            - <a href="{% url 'update' liste.id %}">Modifier cette listes</a>
+            - - <a href="{% url 'delete_list' liste.id %}">Supprimer cette liste</a>
+        </li>
+
         {% endfor %}
     </ul>
+
+    <a href="{% url 'new_liste' %}">Créer une nouvelle liste</a>
 {% endblock %}
